@@ -3,6 +3,7 @@ const coinAmt = document.getElementById('number-input');
 
 const moneyButton = document.getElementById('money-btn');
 const circleDiv = document.getElementById('coins-div');
+const circleObject = document.createElement('div');
 moneyButton.addEventListener('click', (event) => {
     // console.log(selectedCoin.value);
     // console.log(coinAmt.value);
@@ -19,15 +20,14 @@ moneyButton.addEventListener('click', (event) => {
             coinObject.innerText = 'Quarter';
         };
     
-    
-        coinObject.style.cssText = 'width: 100px; height: 100px; background-color: lightgray; border-radius: 50%; text-align: center;';
-        const circleObject = document.createElement('div');
-        // const circleDiv = document.getElementById('coins-div');
+        coinObject.style.cssText = 'width: 100px; height: 100px; background-color: lightgray; border-radius: 50%; text-align: center; border: 5px solid gray;';
+        circleObject.setAttribute("id", "");
         circleObject.append(coinObject);
         circleDiv.append(circleObject);
     };
-    console.log(circleDiv);
     
 });
 
-circleObject.setAttribute("id");
+circleDiv.addEventListener('click', (event) => {
+    circleDiv.remove();
+})
