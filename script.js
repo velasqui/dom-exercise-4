@@ -2,7 +2,7 @@ const selectedCoin = document.getElementById('coins');
 const coinAmt = document.getElementById('number-input');
 
 const moneyButton = document.getElementById('money-btn');
-
+const circleDiv = document.getElementById('coins-div');
 moneyButton.addEventListener('click', (event) => {
     // console.log(selectedCoin.value);
     // console.log(coinAmt.value);
@@ -22,8 +22,11 @@ moneyButton.addEventListener('click', (event) => {
     
         coinObject.style.cssText = 'width: 100px; height: 100px; background-color: lightgray; border-radius: 50%; text-align: center;';
         const circleObject = document.createElement('div');
-        const circleDiv = document.getElementById('coins-div');
+        // const circleDiv = document.getElementById('coins-div');
         circleObject.append(coinObject);
         circleDiv.append(circleObject);
     };
+    console.log(circleDiv);
+    
 });
+
