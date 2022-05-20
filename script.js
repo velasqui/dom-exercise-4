@@ -30,3 +30,4 @@ moneyButton.addEventListener('click', (event) => {
     
 });
 
+circleObject.setAttribute("id");
